@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>NEXUS</h1>
+  <p class="subtitle">União. Força. Evolução.</p>
+</header>
+
+<nav>
+  <a onclick="show('membros')">Membros</a>
+  <a onclick="show('recrutamento')">Recrutamento</a>
+  <a onclick="show('conta')">Conta</a>
+  <a onclick="loginADM()">ADM</a>
+</nav>
+
+<section id="membros" class="section active">
+  <div class="members" id="lista"></div>
+</section>
+
+<section id="recrutamento" class="section">
+  <div class="card">
+    <h2>Recrutamento Nexus</h2>
+    <form onsubmit="enviarRecruit(event)">
+      <input id="rNick" placeholder="Nick" required>
+      <textarea id="rMotivo" placeholder="Por que quer entrar?" required></textarea>
+      <textarea id="rHabilidade" placeholder="No que é bom?" required></textarea>
+      <input id="rTempo" placeholder="Tempo por dia" required>
+      <button>Enviar</button>
+    </form>
+  </div>
+</section>
+
+<section id="conta" class="section">
+  <div class="card">
+    <h2>Criar Conta</h2>
+    <form onsubmit="registrar(event)">
+      <input id="nick" placeholder="Nick" required>
+      <input id="codigo" placeholder="Código">
+      <button>Registrar</button>
+    </form>
+  </div>
+</section>
+
+<section id="adm" class="section">
+  <div id="listaADM"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
